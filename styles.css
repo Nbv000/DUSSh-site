@@ -412,7 +412,7 @@ nav a:hover {
 /* Обновлённые стили для кнопок в разделе «Сведения» */
 .official-nav ul li a {
   font-size: 18px;        /* Увеличенный шрифт */
-  padding: 20px 32px;     /* Просторная обёртка */
+  padding: 10px 16px;     /* Просторная обёртка */
   border: 1px solid #00468C;
   border-radius: 4px;
   color: #00468C;
