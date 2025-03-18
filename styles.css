@@ -406,15 +406,15 @@ nav a:hover {
 .official-nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap; /* Включаем перенос */
+  flex-wrap: wrap; /* включаем перенос */
   justify-content: center;
-  align-items: center; /* Чтобы элементы были на одной линии по вертикали */
+  align-items: center;
   gap: 10px;
   margin-bottom: 40px;
 }
 
 .official-nav ul li {
-  margin: 0; /* Убираем лишние отступы */
+  margin: 0;
 }
 
 .official-nav ul li a {
@@ -425,13 +425,28 @@ nav a:hover {
   color: #00468C;
   text-decoration: none;
   transition: background-color 0.3s;
-  white-space: nowrap; /* Чтобы каждая плашка не ломалась на две строки */
+  /* Убираем nowrap, чтобы текст переносился */
+  white-space: normal; 
 }
 
 .official-nav ul li a:hover {
   background-color: #00468C;
   color: #fff;
 }
+
+/* Медиазапрос для маленьких экранов */
+@media (max-width: 600px) {
+  .official-nav ul {
+    flex-direction: column;    /* ссылки пойдут друг за другом по вертикали */
+    align-items: flex-start;   /* или center, как вам удобнее */
+  }
+  .official-nav ul li a {
+    display: block;
+    width: 100%;          /* ссылка занимает всю ширину контейнера */
+    text-align: center;   /* или left, по желанию */
+  }
+}
+
 
 .official section {
   margin-bottom: 40px;
