@@ -55,10 +55,6 @@ nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.active-link {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
 /* Отступ для фиксированной шапки */
 .header-offset {
   height: 80px;
@@ -405,19 +401,12 @@ nav a:hover {
 
 .official-nav ul {
   list-style: none;
-  display: grid;
-  /* Каждая «плашка» будет иметь минимальную ширину 150px
-     и при недостатке места переходить на новую строку */
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   margin-bottom: 40px;
-  padding: 0;
-  justify-items: center; /* Ссылки по центру */
-}
-
-
-.official-nav ul li {
-  margin: 0;
 }
 
 .official-nav ul li a {
@@ -428,28 +417,13 @@ nav a:hover {
   color: #00468C;
   text-decoration: none;
   transition: background-color 0.3s;
-  white-space: normal; 
-  word-wrap: break-word;  /* Позволяет переносить длинные слова */
+  /* white-space: nowrap;  // <- На тот момент стояло именно так */
 }
 
 .official-nav ul li a:hover {
   background-color: #00468C;
   color: #fff;
 }
-
-/* Медиазапрос для маленьких экранов */
-@media (max-width: 600px) {
-  .official-nav ul {
-    flex-direction: column;    /* ссылки пойдут друг за другом по вертикали */
-    align-items: flex-start;   /* или center, как вам удобнее */
-  }
-  .official-nav ul li a {
-    display: block;
-    width: 100%;          /* ссылка занимает всю ширину контейнера */
-    text-align: center;   /* или left, по желанию */
-  }
-}
-
 
 .official section {
   margin-bottom: 40px;
