@@ -409,15 +409,17 @@ nav a:hover {
   margin-bottom: 40px;
 }
 
+/* Обновлённые стили для кнопок в разделе «Сведения» */
 .official-nav ul li a {
-  font-size: 16px;
-  padding: 6px 12px;
+  font-size: 18px;        /* Увеличенный шрифт */
+  padding: 10px 16px;     /* Просторная обёртка */
   border: 1px solid #00468C;
   border-radius: 4px;
   color: #00468C;
   text-decoration: none;
   transition: background-color 0.3s;
-  /* white-space: nowrap;  // <- На тот момент стояло именно так */
+  white-space: normal;    /* Позволяет тексту переноситься */
+  line-height: 1.4;       /* Оптимальная высота строки */
 }
 
 .official-nav ul li a:hover {
