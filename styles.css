@@ -399,31 +399,36 @@ nav a:hover {
   text-align: center;
 }
 
+/* Альтернативный вариант вертикального меню для раздела "Сведения об образовательной организации" */
 .official-nav ul {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 40px;
+  margin: 0;
+  padding: 0;
+  /* Отказ от flex-раскладки, используем стандартное блочное расположение */
+}
+
+.official-nav ul li {
+  margin-bottom: 10px; /* Расстояние между ссылками */
 }
 
 .official-nav ul li a {
-  font-size: 16px;
-  padding: 6px 12px;
+  display: block;         /* Каждая ссылка занимает всю ширину родительского контейнера */
+  font-size: 18px;        /* Увеличенный шрифт */
+  padding: 12px 16px;     /* Просторная обёртка */
   border: 1px solid #00468C;
   border-radius: 4px;
   color: #00468C;
   text-decoration: none;
   transition: background-color 0.3s;
-  /* white-space: nowrap;  // <- На тот момент стояло именно так */
+  white-space: normal;    /* Разрешаем перенос текста */
+  text-align: center;     /* Центрирование текста */
 }
 
 .official-nav ul li a:hover {
   background-color: #00468C;
   color: #fff;
 }
+
 
 .official section {
   margin-bottom: 40px;
