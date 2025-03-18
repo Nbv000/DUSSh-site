@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ДЮСШ – Главная</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Подключение шрифта с Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Шапка сайта -->
+  <header>
+    <div class="logo">ДЮСШ</div>
+    <nav>
+      <a href="#about">О школе</a>
+      <a href="#news">Новости</a>
+      <a href="#sections">Секции</a>
+      <a href="#contacts">Контакты</a>
+      <a href="#official">Сведения</a>
+      <a href="#" onclick="toggleAccessible(); return false;">Версия для слабовидящих</a>
+    </nav>
+  </header>
+
+  <!-- Отступ под фиксированную шапку -->
+  <div class="header-offset"></div>
+
+  <!-- Hero-блок (баннер) -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Добро пожаловать в нашу спортивную школу</h1>
+      <p>Развиваем талант и укрепляем здоровье детей и подростков.</p>
+      <button class="btn-cta" onclick="location.href='#sections'">
+        Записаться в секцию
+      </button>
+    </div>
+  </section>
+
+  <!-- О школе -->
+  <section id="about" class="about">
+    <h2>О школе</h2>
+    <div class="about-content">
+      <img src="https://cdn.pixabay.com/photo/2014/09/16/20/58/soccer-448773_1280.jpg" alt="Спортивная школа" />
+      <div class="about-text">
+        <p>
+          Наша детско-юношеская спортивная школа существует уже более 20 лет и помогает детям 
+          раскрывать свои спортивные таланты в самых разных дисциплинах. Мы стремимся к тому, 
+          чтобы каждый ребёнок мог найти себе занятие по душе и достичь больших успехов в спорте.
+        </p>
+        <p>
+          Профессиональные тренеры, современная инфраструктура и дружественная атмосфера 
+          делают обучение максимально эффективным и комфортным. Присоединяйтесь к нам!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Новости -->
+  <section id="news" class="news-section">
+    <h2>Новости</h2>
+    <div class="news-slider">
+      <button class="news-btn prev">&#10094;</button>
+      <div class="news-container">
+        <!-- Слайд 1 -->
+        <div class="news-item">
+          <div class="news-photo">Фото 1</div>
+          <div class="news-text">
+            <h3>Турнир по футболу</h3>
+            <p>
+              В эти выходные прошёл городской турнир по футболу среди юниоров.
+              Наши ребята заняли первое место!
+            </p>
+            <span class="read-more">Подробнее...</span>
+          </div>
+        </div>
+        <!-- Слайд 2 -->
+        <div class="news-item">
+          <div class="news-photo">Фото 2</div>
+          <div class="news-text">
+            <h3>Новая баскетбольная площадка</h3>
+            <p>
+              Мы обновили покрытие и оборудование в баскетбольном зале. Теперь тренировки станут ещё комфортнее.
+            </p>
+            <span class="read-more">Подробнее...</span>
+          </div>
+        </div>
+        <!-- Слайд 3 -->
+        <div class="news-item">
+          <div class="news-photo">Фото 3</div>
+          <div class="news-text">
+            <h3>Набор в хоккейную секцию</h3>
+            <p>
+              Открываем дополнительную группу для начинающих хоккеистов от 7 до 10 лет.
+              Спешите записаться!
+            </p>
+            <span class="read-more">Подробнее...</span>
+          </div>
+        </div>
+        <!-- Слайд 4 -->
+        <div class="news-item">
+          <div class="news-photo">Фото 4</div>
+          <div class="news-text">
+            <h3>Теннисный мастер-класс</h3>
+            <p>
+              Известный тренер провёл мастер-класс для наших воспитанников. Все участники получили новые знания и призы!
+            </p>
+            <span class="read-more">Подробнее...</span>
+          </div>
+        </div>
+      </div>
+      <button class="news-btn next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Секции -->
+  <section id="sections" class="sections">
+    <h2>Наши секции</h2>
+    <div class="section-blocks">
+      <!-- Футбол -->
+      <div class="section-block">
+        <div class="section-photo">Футбол</div>
+        <div class="section-info">
+          <h3>Футбол</h3>
+          <p>Развивайте скорость, координацию и тактическое мышление!</p>
+          <button class="button">Записаться</button>
+        </div>
+      </div>
+      <!-- Баскетбол -->
+      <div class="section-block">
+        <div class="section-photo">Баскетбол</div>
+        <div class="section-info">
+          <h3>Баскетбол</h3>
+          <p>Научитесь точным броскам и командной игре под руководством опытных тренеров.</p>
+          <button class="button">Записаться</button>
+        </div>
+      </div>
+      <!-- Теннис -->
+      <div class="section-block">
+        <div class="section-photo">Теннис</div>
+        <div class="section-info">
+          <h3>Теннис</h3>
+          <p>Улучшайте реакцию, точность ударов и выносливость на корте.</p>
+          <button class="button">Записаться</button>
+        </div>
+      </div>
+      <!-- Хоккей -->
+      <div class="section-block">
+        <div class="section-photo">Хоккей</div>
+        <div class="section-info">
+          <h3>Хоккей</h3>
+          <p>Взрывная скорость, отличная командная игра и закалка характера.</p>
+          <button class="button">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contacts" class="contacts">
+    <h2>Контакты</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><strong>Адрес:</strong> г. Пример, ул. Спортивная, д. 10</p>
+        <p><strong>Телефон:</strong> +7 (000) 000-00-00</p>
+        <p><strong>Электронная почта:</strong> info@dyssh.ru</p>
+        <p>
+          Ждём вас в любое время в будние дни с 9:00 до 18:00. 
+          Вы можете также связаться с нами через форму обратной связи.
+        </p>
+      </div>
+      <div class="contact-form">
+        <h3>Напишите нам</h3>
+        <form onsubmit="event.preventDefault(); alert('Сообщение отправлено!');">
+          <input type="text" name="name" placeholder="Ваше имя" required/>
+          <input type="email" name="email" placeholder="Ваш Email" required/>
+          <textarea name="message" rows="4" placeholder="Ваше сообщение"></textarea>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Раздел Сведения об образовательной организации (требования ФЗ) -->
+  <section id="official" class="official">
+    <h2>Сведения об образовательной организации</h2>
+    <nav class="official-nav">
+      <ul>
+        <li><a href="#official-osnovnye">Основные сведения</a></li>
+        <li><a href="#official-structure">Структура и органы управления</a></li>
+        <li><a href="#official-dokuments">Документы</a></li>
+        <li><a href="#official-obrazovanie">Образование</a></li>
+        <li><a href="#official-rukovodstvo">Руководство и педагогический состав</a></li>
+        <li><a href="#official-mto">Материально-техническое обеспечение</a></li>
+        <li><a href="#official-stipendii">Стипендии и меры поддержки</a></li>
+        <li><a href="#official-paid">Платные образовательные услуги</a></li>
+        <li><a href="#official-finance">Финансово-хозяйственная деятельность</a></li>
+        <li><a href="#official-vacancies">Вакантные места для приема</a></li>
+        <li><a href="#official-dostupnaya">Доступная среда</a></li>
+        <li><a href="#official-mezhdunarodnoe">Международное сотрудничество</a></li>
+      </ul>
+    </nav>
+    <section id="official-osnovnye">
+      <h3>Основные сведения</h3>
+      <p>На этой странице размещается информация о полном и сокращённом наименовании образовательной организации, дате создания, учредителях, адресе, режиме работы и контактных данных.</p>
+    </section>
+    <section id="official-structure">
+      <h3>Структура и органы управления</h3>
+      <p>Здесь представлена информация о структуре организации, руководителях, заместителях и контактные данные структурных подразделений.</p>
+    </section>
+    <section id="official-dokuments">
+      <h3>Документы</h3>
+      <p>На этой странице размещаются копии устава, свидетельства о государственной аккредитации, локальные нормативные акты, правила внутреннего распорядка, коллективный договор и другие обязательные документы.</p>
+    </section>
+    <section id="official-obrazovanie">
+      <h3>Образование</h3>
+      <p>Здесь представлена информация о реализуемых образовательных программах, учебном плане, графике занятий, результатах приема и иных аспектах образовательного процесса.</p>
+    </section>
+    <section id="official-rukovodstvo">
+      <h3>Руководство и педагогический состав</h3>
+      <p>На этой странице представлена информация о руководстве образовательной организации и персональном составе педагогических работников, включая квалификацию, стаж и перечень преподаваемых предметов.</p>
+    </section>
+    <section id="official-mto">
+      <h3>Материально-техническое обеспечение</h3>
+      <p>Здесь размещаются сведения об оборудованных кабинетах, спортивных объектах, библиотеках, условиях питания и охраны здоровья обучающихся, а также о средствах обучения и воспитания.</p>
+    </section>
+    <section id="official-stipendii">
+      <h3>Стипендии и меры поддержки</h3>
+      <p>На этой странице содержится информация о стипендиях, мерах социальной поддержки, условиях проживания обучающихся в общежитиях и интернатах.</p>
+    </section>
+    <section id="official-paid">
+      <h3>Платные образовательные услуги</h3>
+      <p>Здесь размещаются сведения о порядке оказания платных образовательных услуг, стоимости обучения и образцах договоров об оказании таких услуг.</p>
+    </section>
+    <section id="official-finance">
+      <h3>Финансово-хозяйственная деятельность</h3>
+      <p>На этой странице представлена информация о поступлении и расходовании финансовых средств, бюджетных ассигнованиях и плане финансово-хозяйственной деятельности образовательной организации.</p>
+    </section>
+    <section id="official-vacancies">
+      <h3>Вакантные места для приема</h3>
+      <p>Здесь указано количество вакантных мест для приема или перевода обучающихся по каждой образовательной программе, а также условия их предоставления.</p>
+    </section>
+    <section id="official-dostupnaya">
+      <h3>Доступная среда</h3>
+      <p>На этой странице представлена информация о специальных условиях для обучения инвалидов и лиц с ограниченными возможностями, включая технические средства для обеспечения доступа.</p>
+    </section>
+    <section id="official-mezhdunarodnoe">
+      <h3>Международное сотрудничество</h3>
+      <p>Здесь размещаются сведения о международных соглашениях, договорах с иностранными организациями, а также данные об аккредитации образовательных программ на международном уровне.</p>
+    </section>
+  </section>
+
+  <!-- Подвал -->
+  <footer>
+    <p>&copy; 2025 Детско-юношеская спортивная школа</p>
+    <p>Все права защищены</p>
+  </footer>
+
+  <!-- Подключение JS -->
+  <script src="scripts.js"></script>
+</body>
+</html>
+
