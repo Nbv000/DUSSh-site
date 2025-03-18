@@ -414,7 +414,7 @@ nav a:hover {
   font-size: 18px;        /* Увеличенный шрифт */
   padding: 10px 16px;     /* Просторная обёртка */
   border: 1px solid #00468C;
-  border-radius: 4px;
+  border-radius: 8px;
   color: #00468C;
   text-decoration: none;
   transition: background-color 0.3s;
