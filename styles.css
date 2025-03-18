@@ -1,0 +1,484 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header, footer {
+  background-color: #00468C;
+  color: #fff;
+  padding: 15px 20px;
+}
+
+/* Шапка */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  white-space: normal;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero-блок */
+.hero {
+  position: relative;
+  background: url("https://resizer.mail.ru/p/accd2151-4e7c-5be5-b1aa-654a9a9e29c2/AQAGe25EEeThsqOgWrxJ3ngIMfejxgm773v3PjDJFeHxaXn6tO5hr3fwvHruhsX-MiecWiOnOdBrJEFjbHJD5nUwN6o.jpg") 
+      center/cover no-repeat;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero .hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero .btn-cta {
+  background-color: #ff6f00;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+}
+
+.hero .btn-cta:hover {
+  background-color: #ff8c00;
+}
+
+/* О школе */
+.about {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #00468C;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.about-content img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Новости */
+.news-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #00468C;
+}
+
+.news-slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.news-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px;
+}
+
+.news-item {
+  min-width: 300px;
+  max-width: 300px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.news-photo {
+  width: 100%;
+  height: 180px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #333;
+}
+
+.news-text {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.news-text h3 {
+  margin-bottom: 10px;
+  color: #00468C;
+  font-size: 20px;
+}
+
+.news-text p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.read-more {
+  color: #ff6f00;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.news-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 20px;
+  z-index: 2;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+/* Секции */
+.sections {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sections h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #00468C;
+}
+
+.section-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.section-block {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.section-photo {
+  width: 100%;
+  height: 180px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #333;
+  font-size: 18px;
+}
+
+.section-info {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.section-info h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #00468C;
+}
+
+.section-info p {
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.section-info .button {
+  background-color: #ff6f00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+}
+
+.section-info .button:hover {
+  background-color: #ff8c00;
+}
+
+/* Контакты */
+.contacts {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contacts h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #00468C;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.contact-form {
+  flex: 1 1 300px;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-form h3 {
+  margin-bottom: 20px;
+  color: #00468C;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #ff6f00;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #ff8c00;
+}
+
+/* Раздел "Сведения об образовательной организации" */
+.official {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f0f8ff;
+}
+
+.official h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #00468C;
+  text-align: center;
+}
+
+/* Двухколоночный макет для раздела "Сведения" */
+.official-container {
+  display: flex;
+  gap: 20px;
+  /* Используем nowrap, чтобы меню (левая колонка) оставалось слева, а контент справа */
+  flex-wrap: nowrap;
+}
+
+/* Левая колонка – вертикальное меню */
+.official-nav {
+  flex: 0 0 300px; /* Фиксированная ширина меню */
+}
+
+.official-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.official-nav ul li {
+  margin-bottom: 10px;
+}
+
+.official-nav ul li a {
+  display: block;
+  font-size: 18px;
+  padding: 12px 16px;
+  border: 1px solid #00468C;
+  border-radius: 4px;
+  color: #00468C;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.official-nav ul li a:hover,
+.official-nav ul li a.active {
+  background-color: #00468C;
+  color: #fff;
+}
+
+/* Правая колонка – контент вкладок */
+.official-content {
+  flex: 1; /* Заполняет оставшееся пространство */
+}
+
+/* Вкладки: по умолчанию скрыты */
+.tab-content {
+  display: none;
+  margin-bottom: 40px;
+}
+
+/* Активная вкладка */
+.tab-content.active {
+  display: block;
+}
+
+.tab-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #00468C;
+}
+
+/* Адаптив для мобильных экранов – при узкой ширине колонки меню и контент идут друг под другом */
+@media (max-width: 768px) {
+  .official-container {
+    flex-direction: column;
+  }
+  .official-nav {
+    flex: 1;
+    max-width: 100%;
+  }
+}
+/* Добавьте это в styles.css */
+body.accessible {
+  background-color: #fafafa; /* Почти белый фон */
+  color: #111;               /* Почти чёрный текст */
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+body.accessible header,
+body.accessible footer {
+  font-size: 20px;
+  background-color: #00468C; /* Можно сохранить синий подвал и шапку */
+}
