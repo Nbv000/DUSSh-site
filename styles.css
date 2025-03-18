@@ -405,13 +405,16 @@ nav a:hover {
 
 .official-nav ul {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap; /* включаем перенос */
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  /* Каждая «плашка» будет иметь минимальную ширину 150px
+     и при недостатке места переходить на новую строку */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   margin-bottom: 40px;
+  padding: 0;
+  justify-items: center; /* Ссылки по центру */
 }
+
 
 .official-nav ul li {
   margin: 0;
@@ -425,8 +428,8 @@ nav a:hover {
   color: #00468C;
   text-decoration: none;
   transition: background-color 0.3s;
-  /* Убираем nowrap, чтобы текст переносился */
   white-space: normal; 
+  word-wrap: break-word;  /* Позволяет переносить длинные слова */
 }
 
 .official-nav ul li a:hover {
