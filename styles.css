@@ -359,6 +359,7 @@ main.news-page {
  ************************************************/
 .sections {
   padding: 60px 20px;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #fff;
