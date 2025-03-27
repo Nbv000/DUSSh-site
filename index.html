@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ДЮСШ – Главная</title>
+  <title>Детско-Юношеская спортивная школа №6</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Подключение шрифта с Google Fonts -->
+  <!-- Подключение шрифта Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
@@ -13,188 +13,168 @@
   />
 </head>
 <body>
-  <!-- Шапка сайта -->
+  <!-- Шапка (Header) -->
   <header>
-    <div class="logo">ДЮСШ</div>
+    <div class="logo">ДЮСШ №6</div>
     <nav>
-      <a href="#about">О школе</a>
-      <a href="#news">Новости</a>
-      <a href="#sections">Секции</a>
-      <a href="#contacts">Контакты</a>
-      <!-- Ссылка на отдельную страницу со сведениями -->
+      <!-- Уменьшенный gap для компактности, ссылки белые -->
+      <a href="index.html">О школе</a>
+      <a href="news.html">Новости</a>
+      <a href="sections.html">Секции</a>
+      <a href="achievements.html">Достижения</a>
+      <a href="contacts.html">Контакты</a>
       <a href="official.html">Сведения</a>
       <a href="#" onclick="toggleAccessible(); return false;">Версия для слабовидящих</a>
     </nav>
   </header>
-
+  
   <!-- Отступ под фиксированную шапку -->
   <div class="header-offset"></div>
-
-  <!-- Hero-блок (баннер) -->
+  
+  <!-- Hero-блок -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Добро пожаловать в нашу спортивную школу</h1>
-      <p>Развиваем талант и укрепляем здоровье детей и подростков.</p>
-      <button class="btn-cta" onclick="location.href='#sections'">
-        Записаться в секцию
-      </button>
+      <h1>Добро пожаловать в ДЮСШ №6</h1>
+      <p>Развиваем спортивные таланты детей и подростков</p>
+      <button class="btn-cta" onclick="location.href='sections.html'">Записаться в секцию</button>
     </div>
   </section>
-
-  <!-- О школе -->
-  <section id="about" class="about">
+  
+  <!-- Блок "О школе" -->
+  <section class="about">
     <h2>О школе</h2>
     <div class="about-content">
-      <img
-        src="https://cdn.pixabay.com/photo/2014/09/16/20/58/soccer-448773_1280.jpg"
-        alt="Спортивная школа"
-      />
+      <img src="https://cdn.pixabay.com/photo/2014/09/16/20/58/soccer-448773_1280.jpg" alt="Спортивная школа">
       <div class="about-text">
         <p>
-          Наша детско-юношеская спортивная школа существует уже более 20 лет и помогает детям 
-          раскрывать свои спортивные таланты в самых разных дисциплинах. Мы стремимся к тому, 
-          чтобы каждый ребёнок мог найти себе занятие по душе и достичь больших успехов в спорте.
-        </p>
-        <p>
-          Профессиональные тренеры, современная инфраструктура и дружественная атмосфера 
-          делают обучение максимально эффективным и комфортным. Присоединяйтесь к нам!
+          Детско-Юношеская спортивная школа №6 с многолетней историей работы направлена на развитие спортивных навыков и формирование здорового образа жизни у детей и подростков. Мы гордимся нашими достижениями и профессиональными тренерами.
         </p>
       </div>
     </div>
   </section>
-
-  <!-- Новости -->
-  <section id="news" class="news-section">
+  
+  <!-- Блок "Новости" -->
+  <section class="news-section">
     <h2>Новости</h2>
     <div class="news-slider">
       <button class="news-btn prev">&#10094;</button>
       <div class="news-container">
-        <!-- Слайд 1 -->
         <div class="news-item">
-          <div class="news-photo">Фото 1</div>
+          <div class="news-photo">Фото</div>
           <div class="news-text">
-            <h3>Турнир по футболу</h3>
-            <p>
-              В эти выходные прошёл городской турнир по футболу среди юниоров.
-              Наши ребята заняли первое место!
-            </p>
-            <span class="read-more">Подробнее...</span>
+            <h3>Новость 1</h3>
+            <p>Краткое описание новости...</p>
+            <span class="read-more">Подробнее</span>
           </div>
         </div>
-        <!-- Слайд 2 -->
         <div class="news-item">
-          <div class="news-photo">Фото 2</div>
+          <div class="news-photo">Фото</div>
           <div class="news-text">
-            <h3>Новая баскетбольная площадка</h3>
-            <p>
-              Мы обновили покрытие и оборудование в баскетбольном зале. Теперь тренировки станут ещё комфортнее.
-            </p>
-            <span class="read-more">Подробнее...</span>
+            <h3>Новость 2</h3>
+            <p>Краткое описание новости...</p>
+            <span class="read-more">Подробнее</span>
           </div>
         </div>
-        <!-- Слайд 3 -->
-        <div class="news-item">
-          <div class="news-photo">Фото 3</div>
-          <div class="news-text">
-            <h3>Набор в хоккейную секцию</h3>
-            <p>
-              Открываем дополнительную группу для начинающих хоккеистов от 7 до 10 лет.
-              Спешите записаться!
-            </p>
-            <span class="read-more">Подробнее...</span>
-          </div>
-        </div>
-        <!-- Слайд 4 -->
-        <div class="news-item">
-          <div class="news-photo">Фото 4</div>
-          <div class="news-text">
-            <h3>Теннисный мастер-класс</h3>
-            <p>
-              Известный тренер провёл мастер-класс для наших воспитанников. Все участники получили новые знания и призы!
-            </p>
-            <span class="read-more">Подробнее...</span>
-          </div>
-        </div>
+        <!-- Можно добавить дополнительные новости -->
       </div>
       <button class="news-btn next">&#10095;</button>
     </div>
   </section>
-
-  <!-- Секции -->
-  <section id="sections" class="sections">
-    <h2>Наши секции</h2>
+  
+  <!-- Блок "Секции" -->
+  <section class="sections">
+    <h2>Секции</h2>
     <div class="section-blocks">
-      <!-- Футбол -->
       <div class="section-block">
-        <div class="section-photo">Футбол</div>
+        <div class="section-photo">Волейбол</div>
         <div class="section-info">
-          <h3>Футбол</h3>
-          <p>Развивайте скорость, координацию и тактическое мышление!</p>
+          <h3>Волейбол</h3>
+          <p>Развивайте командный дух и ловкость на волейбольной площадке.</p>
           <button class="button">Записаться</button>
         </div>
       </div>
-      <!-- Баскетбол -->
+      <div class="section-block">
+        <div class="section-photo">Дзюдо</div>
+        <div class="section-info">
+          <h3>Дзюдо</h3>
+          <p>Научитесь дисциплине и самозащите с нашими тренерами дзюдо.</p>
+          <button class="button">Записаться</button>
+        </div>
+      </div>
+      <div class="section-block">
+        <div class="section-photo">Шашки</div>
+        <div class="section-info">
+          <h3>Шашки</h3>
+          <p>Развивайте стратегическое мышление и концентрацию.</p>
+          <button class="button">Записаться</button>
+        </div>
+      </div>
       <div class="section-block">
         <div class="section-photo">Баскетбол</div>
         <div class="section-info">
           <h3>Баскетбол</h3>
-          <p>Научитесь точным броскам и командной игре под руководством опытных тренеров.</p>
+          <p>Оттачивайте навыки командной игры и точность бросков.</p>
           <button class="button">Записаться</button>
         </div>
       </div>
-      <!-- Теннис -->
       <div class="section-block">
-        <div class="section-photo">Теннис</div>
+        <div class="section-photo">Пауэрлифтинг</div>
         <div class="section-info">
-          <h3>Теннис</h3>
-          <p>Улучшайте реакцию, точность ударов и выносливость на корте.</p>
+          <h3>Пауэрлифтинг</h3>
+          <p>Укрепляйте силу и выносливость с профессиональными тренерами.</p>
           <button class="button">Записаться</button>
         </div>
       </div>
-      <!-- Хоккей -->
       <div class="section-block">
-        <div class="section-photo">Хоккей</div>
+        <div class="section-photo">Настольный теннис</div>
         <div class="section-info">
-          <h3>Хоккей</h3>
-          <p>Взрывная скорость, отличная командная игра и закалка характера.</p>
+          <h3>Настольный теннис</h3>
+          <p>Улучшайте реакцию и координацию в динамичной игре.</p>
           <button class="button">Записаться</button>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Контакты -->
-  <section id="contacts" class="contacts">
+  
+  <!-- Блок "Достижения" (превью на главной) -->
+  <section class="achievements">
+    <h2>Достижения</h2>
+    <div class="achievements-content">
+      <p>Наша школа гордится результатами: победы на региональных и всероссийских соревнованиях, многочисленные награды и дипломы. Узнайте подробнее о наших достижениях!</p>
+      <!-- Кнопка оранжевая, аналогично "Записаться" -->
+      <button class="button" onclick="location.href='achievements.html'">Подробнее о достижениях</button>
+    </div>
+  </section>
+  
+  <!-- Блок "Контакты" -->
+  <section class="contacts">
     <h2>Контакты</h2>
     <div class="contact-grid">
       <div class="contact-info">
         <p><strong>Адрес:</strong> г. Пример, ул. Спортивная, д. 10</p>
-        <p><strong>Телефон:</strong> +7 (000) 000-00-00</p>
-        <p><strong>Электронная почта:</strong> info@dyssh.ru</p>
-        <p>
-          Ждём вас в любое время в будние дни с 9:00 до 18:00. 
-          Вы можете также связаться с нами через форму обратной связи.
-        </p>
+        <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+        <p><strong>Email:</strong> info@dush6.ru</p>
       </div>
       <div class="contact-form">
-        <h3>Напишите нам</h3>
+        <h3>Свяжитесь с нами</h3>
         <form onsubmit="event.preventDefault(); alert('Сообщение отправлено!');">
-          <input type="text" name="name" placeholder="Ваше имя" required/>
-          <input type="email" name="email" placeholder="Ваш Email" required/>
+          <input type="text" name="name" placeholder="Ваше имя" required>
+          <input type="email" name="email" placeholder="Ваш Email" required>
           <textarea name="message" rows="4" placeholder="Ваше сообщение"></textarea>
           <button type="submit">Отправить</button>
         </form>
       </div>
     </div>
   </section>
-
+  
   <!-- Подвал -->
   <footer>
-    <p>&copy; 2025 Детско-юношеская спортивная школа</p>
+    <p>&copy; 2025 Детско-Юношеская спортивная школа №6</p>
     <p>Все права защищены</p>
+    <!-- Обновлённая ссылка на ВК -->
+    <p><a href="https://vk.com/dyussh6sterh" target="_blank">Мы в ВКонтакте</a></p>
   </footer>
-
-  <!-- Подключение JS -->
+  
   <script src="scripts.js"></script>
 </body>
 </html>
