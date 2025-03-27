@@ -1,37 +1,41 @@
-/* Общие стили */
-* {
+/************************************************
+ * ОБЩИЕ НАСТРОЙКИ И СТИКИ-ФУТЕР
+ ************************************************/
+/* html и body на всю высоту */
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', Arial, sans-serif;
 }
 
+/* body — flex-контейнер, чтобы подвал мог «прилипнуть» к низу */
 body {
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0; /* Светлый фон для всей страницы */
   color: #333;
+  font-family: 'Roboto', Arial, sans-serif;
   overflow-x: hidden;
 }
 
+/* Ссылки по умолчанию */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-header, footer {
+/************************************************
+ * ШАПКА (HEADER) И НАВИГАЦИЯ
+ ************************************************/
+header {
   background-color: #00468C;
   color: #fff;
   padding: 15px 20px;
-}
-
-/* Шапка */
-header {
-  position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-shrink: 0; /* Не даём шапке сжиматься */
 }
 
 .logo {
@@ -41,26 +45,34 @@ header {
 
 nav {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 nav a {
   font-weight: 500;
   padding: 8px 12px;
   border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
   transition: background-color 0.3s;
-  white-space: normal;
+  white-space: nowrap;
 }
 
 nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Hero-блок */
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/************************************************
+ * HERO-БЛОК
+ ************************************************/
 .hero {
-  position: relative;
+  /* полноширинный блок */
   background: url("https://resizer.mail.ru/p/accd2151-4e7c-5be5-b1aa-654a9a9e29c2/AQAGe25EEeThsqOgWrxJ3ngIMfejxgm773v3PjDJFeHxaXn6tO5hr3fwvHruhsX-MiecWiOnOdBrJEFjbHJD5nUwN6o.jpg") 
-      center/cover no-repeat;
+    center/cover no-repeat;
   height: 600px;
   display: flex;
   align-items: center;
@@ -105,11 +117,111 @@ nav a:hover {
   background-color: #ff8c00;
 }
 
-/* О школе */
+/************************************************
+ * СТРАНИЦА НОВОСТИ (news.html)
+ ************************************************/
+/* Контейнер для страницы новостей */
+main.news-page {
+  flex: 1 0 auto; /* Чтобы footer шел вниз */
+  margin-top: 80px; /* Отступ, чтобы контент не залезал под header */
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Две колонки: левая (статья), правая (другие новости) */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Левая колонка: блок статьи */
+.news-article-block {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+/* Добавляем вертикальную разделительную линию между фото и текстом */
+.news-article-block::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 350px; /* чуть правее края фото */
+  width: 1px;
+  background-color: #ddd;
+}
+.news-article-image {
+  margin-right: 30px; /* чтобы линия не налезала на фото */
+}
+
+.news-article-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.news-article-text {
+  flex: 1;
+}
+
+.news-article-text h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #00468C;
+}
+
+.news-article-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Правая колонка: блок «Другие новости» */
+.news-other-block {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  align-self: start;
+}
+
+.news-other-block h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #00468C;
+}
+
+.news-other-item {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.news-other-item:hover {
+  background-color: #eee;
+}
+
+.news-other-item h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #00468C;
+}
+
+.news-other-item p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/************************************************
+ * РАЗДЕЛ «О ШКОЛЕ»
+ ************************************************/
 .about {
   padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -131,6 +243,7 @@ nav a:hover {
   max-width: 500px;
   width: 100%;
   border-radius: 10px;
+  background-color: #fff;
 }
 
 .about-text {
@@ -139,15 +252,19 @@ nav a:hover {
 }
 
 .about-text p {
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-/* Новости */
+/************************************************
+ * БЛОК «НОВОСТИ» (превью на главной)
+ ************************************************/
 .news-section {
   padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .news-section h2 {
@@ -174,7 +291,7 @@ nav a:hover {
 .news-item {
   min-width: 300px;
   max-width: 300px;
-  background: #f8f8f8;
+  background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   display: flex;
@@ -199,12 +316,13 @@ nav a:hover {
 }
 
 .news-text h3 {
+  font-size: 20px;
   margin-bottom: 10px;
   color: #00468C;
-  font-size: 20px;
 }
 
 .news-text p {
+  font-size: 16px;
   margin-bottom: 10px;
   line-height: 1.4;
 }
@@ -220,7 +338,7 @@ nav a:hover {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #fff;
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -236,11 +354,15 @@ nav a:hover {
   right: 10px;
 }
 
-/* Секции */
+/************************************************
+ * БЛОК «СЕКЦИИ»
+ ************************************************/
 .sections {
   padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .sections h2 {
@@ -254,16 +376,17 @@ nav a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  padding: 20px;
 }
 
 .section-block {
   background-color: #f8f8f8;
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
 
 .section-photo {
@@ -273,9 +396,9 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 18px;
   font-weight: 700;
   color: #333;
-  font-size: 18px;
 }
 
 .section-info {
@@ -290,13 +413,14 @@ nav a:hover {
 }
 
 .section-info p {
+  font-size: 16px;
   margin-bottom: 20px;
   line-height: 1.4;
 }
 
 .section-info .button {
   background-color: #ff6f00;
-  color: white;
+  color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -310,11 +434,47 @@ nav a:hover {
   background-color: #ff8c00;
 }
 
-/* Контакты */
+/************************************************
+ * БЛОК «ДОСТИЖЕНИЯ»
+ ************************************************/
+.achievements {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.achievements h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #00468C;
+}
+
+.achievements-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.achievements-content .button {
+  background-color: #ff6f00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.achievements-content .button:hover {
+  background-color: #ff8c00;
+}
+
+/************************************************
+ * БЛОК «КОНТАКТЫ»
+ ************************************************/
 .contacts {
   padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -338,19 +498,21 @@ nav a:hover {
 }
 
 .contact-info p {
+  font-size: 18px;
   margin-bottom: 10px;
   line-height: 1.6;
 }
 
 .contact-form {
   flex: 1 1 300px;
-  background-color: #f8f8f8;
+  background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .contact-form h3 {
+  font-size: 20px;
   margin-bottom: 20px;
   color: #00468C;
 }
@@ -381,12 +543,14 @@ nav a:hover {
   background-color: #ff8c00;
 }
 
-/* Раздел "Сведения об образовательной организации" */
+/************************************************
+ * РАЗДЕЛ «СВЕДЕНИЯ» (official.html)
+ ************************************************/
 .official {
   padding: 60px 20px;
+  background-color: #f0f8ff;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #f0f8ff;
 }
 
 .official h2 {
@@ -396,17 +560,14 @@ nav a:hover {
   text-align: center;
 }
 
-/* Двухколоночный макет для раздела "Сведения" */
 .official-container {
   display: flex;
   gap: 20px;
-  /* Используем nowrap, чтобы меню (левая колонка) оставалось слева, а контент справа */
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
-/* Левая колонка – вертикальное меню */
 .official-nav {
-  flex: 0 0 300px; /* Фиксированная ширина меню */
+  flex: 0 0 300px;
 }
 
 .official-nav ul {
@@ -431,24 +592,23 @@ nav a:hover {
   text-align: center;
 }
 
-.official-nav ul li a:hover,
-.official-nav ul li a.active {
+.official-nav ul li a:hover {
   background-color: #00468C;
   color: #fff;
 }
 
-/* Правая колонка – контент вкладок */
-.official-content {
-  flex: 1; /* Заполняет оставшееся пространство */
+.active-link {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
-/* Вкладки: по умолчанию скрыты */
+.official-content {
+  flex: 1;
+}
+
 .tab-content {
   display: none;
   margin-bottom: 40px;
 }
-
-/* Активная вкладка */
 .tab-content.active {
   display: block;
 }
@@ -459,8 +619,64 @@ nav a:hover {
   color: #00468C;
 }
 
-/* Адаптив для мобильных экранов – при узкой ширине колонки меню и контент идут друг под другом */
+/************************************************
+ * ПОДВАЛ (FOOTER)
+ ************************************************/
+footer {
+  background-color: #00468C;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/************************************************
+ * ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ
+ ************************************************/
+body.accessible {
+  font-size: 20px;
+  line-height: 1.8;
+  background-color: #fafafa;
+  color: #111;
+}
+
+body.accessible header nav a {
+  color: #fff !important;
+}
+
+body.accessible header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff !important;
+}
+
+/************************************************
+ * АДАПТАЦИЯ ПОД МОБИЛЬНЫЕ ЭКРАНЫ
+ ************************************************/
 @media (max-width: 768px) {
+  main.news-page {
+    grid-template-columns: 1fr; 
+    margin-top: 120px; 
+  }
+  .news-article-block {
+    flex-direction: column;
+  }
+  .news-article-image img {
+    width: 100%;
+  }
+  .news-other-block {
+    margin-top: 20px;
+  }
+  
   .official-container {
     flex-direction: column;
   }
@@ -468,17 +684,4 @@ nav a:hover {
     flex: 1;
     max-width: 100%;
   }
-}
-/* Добавьте это в styles.css */
-body.accessible {
-  background-color: #fafafa; /* Почти белый фон */
-  color: #111;               /* Почти чёрный текст */
-  font-size: 20px;
-  line-height: 1.8;
-}
-
-body.accessible header,
-body.accessible footer {
-  font-size: 20px;
-  background-color: #00468C; /* Можно сохранить синий подвал и шапку */
 }
