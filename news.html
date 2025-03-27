@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Новость – ДЮСШ №6</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Подключаем Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- Шапка сайта -->
+  <header>
+    <div class="logo">ДЮСШ №6</div>
+    <nav>
+            <a href="index.html">О школе</a>
+      <a href="news.html">Новости</a>
+      <a href="sections.html">Секции</a>
+      <a href="achievements.html">Достижения</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="official.html">Сведения</a>
+      <a href="#" onclick="toggleAccessible(); return false;">Версия для слабовидящих</a>
+    </nav>
+  </header>
+  
+  <!-- Основной контейнер для контента -->
+  <main class="news-page">
+    <!-- Левая колонка: основная статья -->
+    <section class="news-article-block">
+      <div class="news-article-image">
+        <!-- Замените на реальное изображение -->
+        <img src="/home/nbv000/Рабочий стол/Kwork/Сайт ДЮСШ/1.jpg" alt="Фото новости">
+      </div>
+      <div class="news-article-text">
+        <h1>Заголовок новости</h1>
+        <p>
+          Здесь располагается полный текст новости. Это может быть подробное описание события, 
+          достижений, отчет о соревновании и т.д.
+        </p>
+        <p>
+          Дополнительный абзац, дающий больше деталей и информации для посетителей. 
+          При желании можно оформить текст списками, подзаголовками и т.п.
+        </p>
+      </div>
+    </section>
+    
+    <!-- Правая колонка: блок "Другие новости" -->
+    <aside class="news-other-block">
+      <h2>Другие новости</h2>
+      <div class="news-other-item">
+        <h3>Новость 2</h3>
+        <p>Краткое описание...</p>
+      </div>
+      <div class="news-other-item">
+        <h3>Новость 3</h3>
+        <p>Краткое описание...</p>
+      </div>
+      <div class="news-other-item">
+        <h3>Новость 4</h3>
+        <p>Краткое описание...</p>
+      </div>
+      <!-- Дополнительные карточки -->
+    </aside>
+  </main>
+  
+  <!-- Подвал -->
+  <footer>
+    <p>&copy; 2025 Детско-Юношеская спортивная школа №6</p>
+    <p>Все права защищены</p>
+    <p><a href="https://vk.com/dyussh6sterh" target="_blank">Мы в ВКонтакте</a></p>
+  </footer>
+  
+  <!-- Скрипт (для режима для слабовидящих и т.д.) -->
+  <script src="scripts.js"></script>
+</body>
+</html>
+
