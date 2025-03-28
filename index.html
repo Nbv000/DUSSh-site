@@ -5,19 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Детско-Юношеская спортивная школа №6</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Подключение шрифта Google Fonts -->
+  <!-- Подключение Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Шапка (Header) -->
+  <!-- Шапка -->
   <header>
     <div class="logo">ДЮСШ №6</div>
     <nav>
-      <!-- Уменьшенный gap для компактности, ссылки белые -->
       <a href="index.html">О школе</a>
       <a href="news.html">Новости</a>
       <a href="sections.html">Секции</a>
@@ -75,7 +71,6 @@
             <span class="read-more">Подробнее</span>
           </div>
         </div>
-        <!-- Можно добавить дополнительные новости -->
       </div>
       <button class="news-btn next">&#10095;</button>
     </div>
@@ -85,63 +80,60 @@
   <section class="sections">
     <h2>Секции</h2>
     <div class="section-blocks">
-      <div class="section-block">
+      <!-- Каждая карточка обернута в ссылку на отдельную страницу секции -->
+      <a href="sections/volleyball.html" class="section-block">
         <div class="section-photo">Волейбол</div>
         <div class="section-info">
           <h3>Волейбол</h3>
           <p>Развивайте командный дух и ловкость на волейбольной площадке.</p>
-          <button class="button">Записаться</button>
         </div>
-      </div>
-      <div class="section-block">
+      </a>
+      <a href="sections/judo.html" class="section-block">
         <div class="section-photo">Дзюдо</div>
         <div class="section-info">
           <h3>Дзюдо</h3>
           <p>Научитесь дисциплине и самозащите с нашими тренерами дзюдо.</p>
-          <button class="button">Записаться</button>
         </div>
-      </div>
-      <div class="section-block">
+      </a>
+      <a href="sections/chess.html" class="section-block">
         <div class="section-photo">Шашки</div>
         <div class="section-info">
           <h3>Шашки</h3>
           <p>Развивайте стратегическое мышление и концентрацию.</p>
-          <button class="button">Записаться</button>
         </div>
-      </div>
-      <div class="section-block">
+      </a>
+      <a href="sections/basketball.html" class="section-block">
         <div class="section-photo">Баскетбол</div>
         <div class="section-info">
           <h3>Баскетбол</h3>
           <p>Оттачивайте навыки командной игры и точность бросков.</p>
-          <button class="button">Записаться</button>
         </div>
-      </div>
-      <div class="section-block">
+      </a>
+      <a href="sections/powerlifting.html" class="section-block">
         <div class="section-photo">Пауэрлифтинг</div>
         <div class="section-info">
           <h3>Пауэрлифтинг</h3>
           <p>Укрепляйте силу и выносливость с профессиональными тренерами.</p>
-          <button class="button">Записаться</button>
         </div>
-      </div>
-      <div class="section-block">
+      </a>
+      <a href="sections/tennis.html" class="section-block">
         <div class="section-photo">Настольный теннис</div>
         <div class="section-info">
           <h3>Настольный теннис</h3>
           <p>Улучшайте реакцию и координацию в динамичной игре.</p>
-          <button class="button">Записаться</button>
         </div>
-      </div>
+      </a>
     </div>
   </section>
   
-  <!-- Блок "Достижения" (превью на главной) -->
+  <!-- Блок "Достижения" -->
   <section class="achievements">
     <h2>Достижения</h2>
     <div class="achievements-content">
-      <p>Наша школа гордится результатами: победы на региональных и всероссийских соревнованиях, многочисленные награды и дипломы. Узнайте подробнее о наших достижениях!</p>
-      <!-- Кнопка оранжевая, аналогично "Записаться" -->
+      <p>
+        Наша школа гордится результатами: победы на региональных и всероссийских соревнованиях, 
+        многочисленные награды и дипломы. Узнайте подробнее о наших достижениях!
+      </p>
       <button class="button" onclick="location.href='achievements.html'">Подробнее о достижениях</button>
     </div>
   </section>
@@ -171,7 +163,6 @@
   <footer>
     <p>&copy; 2025 Детско-Юношеская спортивная школа №6</p>
     <p>Все права защищены</p>
-    <!-- Обновлённая ссылка на ВК -->
     <p><a href="https://vk.com/dyussh6sterh" target="_blank">Мы в ВКонтакте</a></p>
   </footer>
   
