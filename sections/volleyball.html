@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Волейбол – ДЮСШ №6</title>
+  <link rel="stylesheet" href="../styles.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+  <!-- Шапка -->
+  <header>
+    <div class="logo">ДЮСШ №6</div>
+    <nav>
+      <a href="../index.html">О школе</a>
+      <a href="../news.html">Новости</a>
+      <a href="../sections.html">Секции</a>
+      <a href="../achievements.html">Достижения</a>
+      <a href="../contacts.html">Контакты</a>
+      <a href="../official.html">Сведения</a>
+      <a href="#" onclick="toggleAccessible(); return false;">Версия для слабовидящих</a>
+    </nav>
+  </header>
+  <div class="header-offset"></div>
+  
+  <!-- Оранжевый блок с надписью "Волейбол" (тёмный текст) -->
+  <section class="section-hero">
+    <div class="section-hero-overlay">
+      <h1>Волейбол</h1>
+    </div>
+  </section>
+  
+  <main class="section-page">
+    <!-- Описание секции -->
+    <div class="section-description">
+      <h2>О секции "Волейбол"</h2>
+      <p>
+        Волейбол – это динамичная командная игра, развивающая физическую выносливость, координацию и командный дух. Наша секция приглашает детей и подростков, стремящихся улучшить свои навыки, освоить технику и насладиться игрой.
+      </p>
+    </div>
+    
+    <!-- Расписание тренировок -->
+    <section class="schedule">
+      <h2>Расписание тренировок</h2>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>День недели</th>
+            <th>Время</th>
+            <th>Тренер</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Понедельник</td>
+            <td>16:00 – 18:00</td>
+            <td>Иванов И.И.</td>
+          </tr>
+          <tr>
+            <td>Среда</td>
+            <td>16:00 – 18:00</td>
+            <td>Иванов И.И.</td>
+          </tr>
+          <tr>
+            <td>Пятница</td>
+            <td>16:00 – 18:00</td>
+            <td>Петров П.П.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- Тренеры -->
+    <section class="coaches">
+      <h2>Наши тренеры</h2>
+      <div class="coach-cards">
+        <div class="coach-card">
+          <img src="https://via.placeholder.com/150" alt="Тренер Иванов">
+          <h3>Иванов И.И.</h3>
+          <p>Мастер спорта, 10 лет опыта. Подготовил множество призёров соревнований.</p>
+        </div>
+        <div class="coach-card">
+          <img src="https://via.placeholder.com/150" alt="Тренер Петров">
+          <h3>Петров П.П.</h3>
+          <p>Кандидат в мастера спорта, призёр региональных турниров. Ответственный тренер.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Заявление о зачислении -->
+    <section class="enrollment">
+      <h2>Заявление о зачислении</h2>
+      <p>
+        Для записи в секцию, пожалуйста, скачайте заявление, заполните его и принесите на приём.
+      </p>
+      <a class="button" href="../docs/zayavlenie-voleybol.pdf" target="_blank">Скачать заявление (PDF)</a>
+    </section>
+    
+    <!-- Кнопка онлайн-записи -->
+    <section class="online-enrollment">
+      <button class="button" onclick="alert('Функция онлайн-записи будет реализована в будущем');">Записаться онлайн</button>
+    </section>
+  </main>
+  
+  <!-- Подвал -->
+  <footer>
+    <p>&copy; 2025 Детско-Юношеская спортивная школа №6</p>
+    <p>Все права защищены</p>
+    <p><a href="https://vk.com/dyussh6sterh" target="_blank">Мы в ВКонтакте</a></p>
+  </footer>
+  
+  <script src="../scripts.js"></script>
+</body>
+</html>
+
