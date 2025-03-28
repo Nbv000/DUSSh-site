@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Новость – ДЮСШ №6</title>
+  <title>Новости – ДЮСШ №6</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Подключаем Google Fonts -->
+  <!-- Подключение Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
@@ -17,8 +17,8 @@
   <header>
     <div class="logo">ДЮСШ №6</div>
     <nav>
-            <a href="index.html">О школе</a>
-      <a href="news.html">Новости</a>
+      <a href="index.html">О школе</a>
+      <a href="news.html" class="active">Новости</a>
       <a href="sections.html">Секции</a>
       <a href="achievements.html">Достижения</a>
       <a href="contacts.html">Контакты</a>
@@ -27,41 +27,45 @@
     </nav>
   </header>
   
-  <!-- Основной контейнер для контента -->
+  <!-- Отступ под фиксированную шапку -->
+  <div class="header-offset"></div>
+  
+  <!-- Основной контейнер страницы новостей -->
   <main class="news-page">
     <!-- Левая колонка: основная статья -->
-    <section class="news-article-block">
-      <div class="news-article-image">
-        <!-- Замените на реальное изображение -->
-        <img src="/home/nbv000/Рабочий стол/Kwork/Сайт ДЮСШ/1.jpg" alt="Фото новости">
+    <div class="news-article-block">
+      <div class="article-image">
+        <!-- Замените на свой файл изображения -->
+        <img src="https://via.placeholder.com/300x200?text=Внимание%21+Объявление" alt="Внимание! Объявление">
       </div>
-      <div class="news-article-text">
+      <div class="article-text">
         <h1>Заголовок новости</h1>
         <p>
-          Здесь располагается полный текст новости. Это может быть подробное описание события, 
-          достижений, отчет о соревновании и т.д.
+          Здесь располагается полный текст новости. Это может быть подробное описание события,
+          достижения, отчёт о соревнованиях и т.д. Текст может включать несколько абзацев, фотографии
+          и другую информацию.
         </p>
         <p>
-          Дополнительный абзац, дающий больше деталей и информации для посетителей. 
-          При желании можно оформить текст списками, подзаголовками и т.п.
+          Дополнительный абзац, дающий больше деталей и интересных фактов для посетителей.
+          При желании можно оформить текст списками, подзаголовками, ссылками на другие ресурсы и т.п.
         </p>
       </div>
-    </section>
+    </div>
     
-    <!-- Правая колонка: блок "Другие новости" -->
+    <!-- Правая колонка: другие новости -->
     <aside class="news-other-block">
       <h2>Другие новости</h2>
       <div class="news-other-item">
         <h3>Новость 2</h3>
-        <p>Краткое описание...</p>
+        <p>Краткое описание второй новости...</p>
       </div>
       <div class="news-other-item">
         <h3>Новость 3</h3>
-        <p>Краткое описание...</p>
+        <p>Краткое описание третьей новости...</p>
       </div>
       <div class="news-other-item">
         <h3>Новость 4</h3>
-        <p>Краткое описание...</p>
+        <p>Краткое описание четвёртой новости...</p>
       </div>
       <!-- Дополнительные карточки -->
     </aside>
@@ -78,4 +82,3 @@
   <script src="scripts.js"></script>
 </body>
 </html>
-
