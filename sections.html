@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Секции – ДЮСШ №6</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Подключение Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- Шапка сайта -->
+  <header>
+    <div class="logo">ДЮСШ №6</div>
+    <nav>
+      <a href="index.html">О школе</a>
+      <a href="news.html">Новости</a>
+      <a href="sections.html" class="active">Секции</a>
+      <a href="achievements.html">Достижения</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="official.html">Сведения</a>
+      <a href="#" onclick="toggleAccessible(); return false;">Версия для слабовидящих</a>
+    </nav>
+  </header>
+  <div class="header-offset"></div>
+
+  <main class="sections-page">
+    <h1>Секции</h1>
+    <p>
+      Здесь вы можете выбрать интересующую вас секцию и ознакомиться с расписанием тренировок,
+      узнать о тренерах и записаться онлайн.
+    </p>
+
+    <!-- Список всех секций в виде карточек или ссылок -->
+    <section class="sections-list">
+      <h2>Наши секции</h2>
+      <div class="section-blocks">
+        <a href="sections/volleyball.html" class="section-block">
+          <div class="section-photo">Волейбол</div>
+          <div class="section-info">
+            <h3>Волейбол</h3>
+            <p>Командная игра, развивающая ловкость и командный дух.</p>
+          </div>
+        </a>
+        <a href="sections/judo.html" class="section-block">
+          <div class="section-photo">Дзюдо</div>
+          <div class="section-info">
+            <h3>Дзюдо</h3>
+            <p>Боевой вид спорта, развивающий силу и дисциплину.</p>
+          </div>
+        </a>
+        <a href="sections/chess.html" class="section-block">
+          <div class="section-photo">Шашки</div>
+          <div class="section-info">
+            <h3>Шашки</h3>
+            <p>Стратегическая игра, улучшающая мышление и концентрацию.</p>
+          </div>
+        </a>
+        <a href="sections/basketball.html" class="section-block">
+          <div class="section-photo">Баскетбол</div>
+          <div class="section-info">
+            <h3>Баскетбол</h3>
+            <p>Динамичная командная игра, улучшающая выносливость.</p>
+          </div>
+        </a>
+        <a href="sections/powerlifting.html" class="section-block">
+          <div class="section-photo">Пауэрлифтинг</div>
+          <div class="section-info">
+            <h3>Пауэрлифтинг</h3>
+            <p>Силовой вид спорта, развивающий силу и выносливость.</p>
+          </div>
+        </a>
+        <a href="sections/tennis.html" class="section-block">
+          <div class="section-photo">Настольный теннис</div>
+          <div class="section-info">
+            <h3>Настольный теннис</h3>
+            <p>Игра, развивающая реакцию и координацию.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Календарь событий/мероприятий/тренировок -->
+    <section class="sections-calendar">
+      <h2>Календарь событий и мероприятий</h2>
+      <p>
+        В этом календаре вы найдёте предстоящие соревнования, открытые тренировки,
+        мастер-классы и другие события, связанные с нашими секциями.
+      </p>
+
+      <!-- Пример упрощённого календаря (таблица). 
+           В реальном проекте можно использовать JS-библиотеку. -->
+      <div class="calendar-container">
+        <table class="calendar-table">
+          <thead>
+            <tr>
+              <th>Дата</th>
+              <th>Событие</th>
+              <th>Секция</th>
+              <th>Место</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10.09.2025</td>
+              <td>Открытый турнир по волейболу</td>
+              <td>Волейбол</td>
+              <td>Спортзал №1</td>
+            </tr>
+            <tr>
+              <td>15.09.2025</td>
+              <td>Мастер-класс по дзюдо</td>
+              <td>Дзюдо</td>
+              <td>Тренировочный зал №2</td>
+            </tr>
+            <tr>
+              <td>20.09.2025</td>
+              <td>Внутришкольное первенство по шашкам</td>
+              <td>Шашки</td>
+              <td>Холл ДЮСШ №6</td>
+            </tr>
+            <!-- Добавляйте больше строк по мере необходимости -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Детско-Юношеская спортивная школа №6</p>
+    <p>Все права защищены</p>
+    <p><a href="https://vk.com/dyussh6sterh" target="_blank">Мы в ВКонтакте</a></p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
